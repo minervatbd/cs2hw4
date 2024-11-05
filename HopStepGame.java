@@ -10,7 +10,7 @@
     public int minCost(int squares[], int len)
     {
         // base case, len 1 or 2
-        if (len == 1 || len == 2)
+        if (len == 0 || len == 1)
             return squares[len];
         
         else
