@@ -11,7 +11,7 @@
     {
         // base case, len 1 or 2
         if (len == 1 || len == 2)
-            return 0;
+            return squares[len];
         
         else
         {
