@@ -13,13 +13,13 @@
     }
 
     // TODO
-    public int minCostMemoization(int squares[], int len)
+    public int minCostMemoization(int squares[], int len, int memo[])
     {
         return 0;
     }
 
     // TODO
-    public int minCostTabulation(int squares[], int len)
+    public int minCostTabulation(int squares[])
     {
         return 0;
     }
