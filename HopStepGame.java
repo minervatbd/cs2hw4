@@ -22,7 +22,16 @@
     // TODO
     public int minCostMemoization(int squares[], int len, int memo[])
     {
-        return 0;
+        if (len == 0 || len == 1)
+            return squares[len];
+        
+        if (memo[len] != 0)
+        {
+            System.out.println("PROC!");
+            return memo[len];
+        }
+        
+        return memo[len] = squares[len] + min(minCostMemoization(squares, len - 1, memo), minCostMemoization(squares, len - 2, memo));
     }
 
     // TODO
