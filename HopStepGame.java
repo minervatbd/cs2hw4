@@ -13,23 +13,18 @@
         if (len == 0 || len == 1)
             return squares[len];
         
-        else
-        {
-            return squares[len] + min(minCost(squares, len - 1), minCost(squares, len - 2));
-        }
+        return squares[len] + min(minCost(squares, len - 1), minCost(squares, len - 2));
+
     }
 
-    // TODO
+    // memoized
     public int minCostMemoization(int squares[], int len, int memo[])
     {
         if (len == 0 || len == 1)
             return squares[len];
         
         if (memo[len] != 0)
-        {
-            System.out.println("PROC!");
             return memo[len];
-        }
         
         return memo[len] = squares[len] + min(minCostMemoization(squares, len - 1, memo), minCostMemoization(squares, len - 2, memo));
     }
