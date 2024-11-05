@@ -6,14 +6,8 @@
 
  public class HopStepGame 
  {
-    // no memoization/tabulation
+    // recursive solution
     public int minCost(int squares[], int len)
-    {
-        return min(minCostR(squares, len), minCostR(squares, len - 1));
-    }
-
-    // recursive component
-    static int minCostR(int squares[], int len)
     {
         // base case, len 1 or 2
         if (len == 1 || len == 2)
@@ -21,7 +15,7 @@
         
         else
         {
-            return squares[len] + min(minCostR(squares, len - 1), minCostR(squares, len - 2));
+            return squares[len] + min(minCost(squares, len - 1), minCost(squares, len - 2));
         }
     }
 
